@@ -45,7 +45,7 @@
                 instances.Add(typeof(T), new Singleton(serviceProvider =>
                 {
                     object? instance = factoryDelegate.Invoke(serviceProvider);
-                    return instance is T typedInstance ? (object)typedInstance : throw new UnregisteredInstanceException();
+                    return instance is T typedInstance ? typedInstance : throw new UnregisteredInstanceException();
                 }));
             }
         }
@@ -82,7 +82,7 @@
                 instances.Add(typeof(T), new Transient(serviceProvider =>
                 {
                     object? instance = factoryDelegate.Invoke(serviceProvider);
-                    return instance is T typedInstance ? (object)typedInstance : throw new UnregisteredInstanceException();
+                    return instance is T typedInstance ? typedInstance : throw new UnregisteredInstanceException();
                 }));
             }
         }
