@@ -1,4 +1,4 @@
-# Homemade Service provider
+# Home Made Service Provider
 By Simon Danielsson, 2025
 
 ## Why?
